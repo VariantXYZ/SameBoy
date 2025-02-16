@@ -1021,7 +1021,9 @@ static const char *get_arg_option(const char *option, int *argc, char **argv)
 #include <CoreFoundation/CoreFoundation.h>
 static void enable_smooth_scrolling(void)
 {
+#if MAC_OS_X_VERSION_MIN_REQUIRED >= 1090
     CFPreferencesSetAppValue(CFSTR("AppleMomentumScrollSupported"), kCFBooleanTrue, kCFPreferencesCurrentApplication);
+#endif
 }
 #endif
 
