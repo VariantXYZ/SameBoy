@@ -11,6 +11,10 @@ gl_Position = aPosition;\n\
 }\n\
 ";
 
+#define glBindFragDataLocation(...) (void)0;
+#define glBindVertexArray(...) (void)0;
+#define glGenVertexArrays(...) (void)0;
+
 static GLuint create_shader(const char *source, GLenum type)
 {
     // Create the shader object
