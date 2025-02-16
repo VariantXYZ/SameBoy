@@ -1121,7 +1121,8 @@ int main(int argc, char **argv)
 
     const char *model_string = get_arg_option("--model", &argc, argv);
     bool fullscreen = get_arg_flag("--fullscreen", &argc, argv) || get_arg_flag("-f", &argc, argv);
-    bool nogl = get_arg_flag("--nogl", &argc, argv);
+    //bool nogl = get_arg_flag("--nogl", &argc, argv);
+    bool nogl = true; // just disable it outright on Tiger
     stop_on_start = get_arg_flag("--stop-debugger", &argc, argv) || get_arg_flag("-s", &argc, argv);
     
 
