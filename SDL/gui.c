@@ -2408,9 +2408,11 @@ void run_gui(bool is_running)
             }
         }
         switch (event.type) {
+#if SDL_DISPLAYEVENT
             case SDL_DISPLAYEVENT:
                 update_swap_interval();
                 break;
+#endif
             case SDL_QUIT: {
                 if (!is_running) {
                     exit(0);

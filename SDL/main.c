@@ -209,9 +209,11 @@ static void handle_events(GB_gameboy_t *gb)
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
         switch (event.type) {
+#ifdef SDL_DISPLAYEVENT
             case SDL_DISPLAYEVENT:
                 update_swap_interval();
                 break;
+#endif
             case SDL_QUIT:
                 pending_command = GB_SDL_QUIT_COMMAND;
                 break;
